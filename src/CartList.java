@@ -4,18 +4,9 @@ import java.util.List;
 /**
  * Created by JamieReed207 on 4/16/17.
  */
-public class CartList {
-    private static CartList instance = null;
+public class CartList implements itemList{
     private List<Item> CartList = new ArrayList<Item>();
     private static double total;
-
-    public static CartList getInstance() {
-        if(instance == null) {
-            instance = new CartList();
-        }
-        return instance;
-    }
-
 
     public void addItem(Item item){
         CartList.add(item);
@@ -33,21 +24,7 @@ public class CartList {
         return CartList.get(i);
     }
 
-    public void printCart(){
-        for( Item item : CartList){
-            System.out.println("Item: " + item.getItem()+"............."+item.getPrice());
-        }
-    }
+    public int getSize() {return CartList.size();}
 
-    public void printTotal(){
-        total = 0;
-        for( Item item : CartList){
-            total = total + item.getPrice();
-        }
-        System.out.println("                 Total: $" + total);
-    }
 
-    public void printCartSize(){
-        System.out.println("Item Count: "+CartList.size());
-    }
 }

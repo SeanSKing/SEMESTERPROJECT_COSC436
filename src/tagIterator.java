@@ -3,10 +3,10 @@
  */
 public class tagIterator implements listIterator  {
     private int current;
-    private StockList all_list;
+    private itemList all_list;
     private String searchTag;
 
-    public tagIterator(StockList list, int start, String tag){
+    public tagIterator(itemList list, int start, String tag){
         current = start;
         all_list = list;
         searchTag = tag;

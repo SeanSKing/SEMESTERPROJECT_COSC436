@@ -4,9 +4,9 @@
 public class allIterator implements listIterator  {
     private int current;
 
-    private StockList all_list;
+    private itemList all_list;
 
-    public allIterator(StockList list, int start){
+    public allIterator(itemList list, int start){
         current = start;
         all_list = list;
     }
