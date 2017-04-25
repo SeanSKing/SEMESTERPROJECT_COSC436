@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1e2bb47-5ecb-423b-bdc7-a17b4139ec16" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/AddToCart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/RemoveFromCart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AddToCart.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/RemoveFromCart.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/CartList.class" afterPath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/CartList.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/Invoker.class" afterPath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/Invoker.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/Main.class" afterPath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/Main.class" />
@@ -13,12 +9,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/allIterator.class" afterPath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/allIterator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/tagIterator.class" afterPath="$PROJECT_DIR$/out/production/SEMESTER_PROJECT_OOM/tagIterator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CartList.java" afterPath="$PROJECT_DIR$/src/CartList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Invoker.java" afterPath="$PROJECT_DIR$/src/Invoker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StockList.java" afterPath="$PROJECT_DIR$/src/StockList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/allIterator.java" afterPath="$PROJECT_DIR$/src/allIterator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tagIterator.java" afterPath="$PROJECT_DIR$/src/tagIterator.java" />
     </list>
     <ignored path="SEMESTER_PROJECT_OOM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +34,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="240">
               <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding />
             </state>
@@ -209,8 +199,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="185" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="729" />
   </component>
@@ -705,15 +694,23 @@
       <updated>1492116980324</updated>
       <workItem from="1492116985173" duration="10652000" />
       <workItem from="1492465868539" duration="23769000" />
-      <workItem from="1493076843800" duration="1306000" />
+      <workItem from="1493076843800" duration="1364000" />
     </task>
+    <task id="LOCAL-00001" summary="Align Class Structure">
+      <created>1493079680168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1493079680168</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35727000" />
+    <option name="totallyTimeSpent" value="35785000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="185" width="1280" height="729" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="729" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -723,8 +720,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -780,6 +777,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Align Class Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Align Class Structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1153,7 +1154,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="240">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
