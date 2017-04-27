@@ -1,4 +1,4 @@
-/**
+ /**
  * Created by JamieReed207 on 4/23/17.
  */
 public class PreferenceUtil {
@@ -57,7 +57,7 @@ public class PreferenceUtil {
         isPrime = prime;
     }
 
-    public String getFullAddress(){
-        return Address +" "+City+" "+State+" "+Country;
+    public void getAccount(){
+        System.out.print( FirstName+" "+LastName+"\n"+Address+" \n"+City+", "+State+" "+Country);
     }
 }

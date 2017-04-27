@@ -1,12 +1,15 @@
-import java.util.ArrayList;
+
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.List;
 
 /**
  * Created by JamieReed207 on 4/16/17.
  */
 public class StockList implements itemList{
-    private List<Item> StockList = new ArrayList<Item>();
-
+    private ObservableList<Item> StockList = FXCollections.observableArrayList();
 
     public void addItem(Item item){
         StockList.add(item);
@@ -28,9 +31,7 @@ public class StockList implements itemList{
 
     public void printStock(){
         for( Item item : StockList){
-            System.out.println("Item: " + item.getItem());
+            System.out.println("Item: " + item.getName());
         }
     }
-
-
 }

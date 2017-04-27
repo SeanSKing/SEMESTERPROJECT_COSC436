@@ -1,11 +1,18 @@
-/**
+ /**
  * Created by JamieReed207 on 4/17/17.
  */
 public class CMDRemoveFromCart implements Command {
+    private CartList cartList;
+    private int indexNum;
 
-    public CMDRemoveFromCart(CartList cartList, int i){
-        cartList.removeItem(i);
+    public CMDRemoveFromCart(CartList cart, int i){
+        cartList = cart;
+        indexNum = i;
+
     }
 
-    public void execute(){}
+    public Object execute(){
+        cartList.removeItem(indexNum);
+        return null;
+    }
 }

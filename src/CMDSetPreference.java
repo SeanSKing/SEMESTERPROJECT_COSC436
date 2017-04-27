@@ -1,4 +1,4 @@
-/**
+ /**
  * Created by JamieReed207 on 4/24/17.
  */
 public class CMDSetPreference implements Command {
@@ -15,5 +15,7 @@ public class CMDSetPreference implements Command {
         pref.setIsPrime(isPrime);
 
     }
-    public void execute() {}
+    public Object execute() {
+        return "success";
+    }
 }

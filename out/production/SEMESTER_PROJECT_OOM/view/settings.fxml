@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="27.0" layoutY="22.0" text="First Name" />
+      <Label layoutX="26.0" layoutY="246.0" text="Prime" />
+      <TextField fx:id="nameField" layoutX="104.0" layoutY="17.0" />
+      <CheckBox layoutX="91.0" layoutY="246.0" mnemonicParsing="false" />
+      <Button layoutX="229.0" layoutY="277.0" mnemonicParsing="false" text="Apply" />
+      <Button layoutX="150.0" layoutY="277.0" mnemonicParsing="false" text="Populate" />
+      <Button layoutX="14.0" layoutY="277.0" mnemonicParsing="false" text="Cancel" />
+      <Label layoutX="28.0" layoutY="59.0" text="Last Name" />
+      <Label layoutX="28.0" layoutY="95.0" text="Address" />
+      <Label layoutX="32.0" layoutY="129.0" text="City" />
+      <Label layoutX="29.0" layoutY="167.0" text="State" />
+      <Label layoutX="29.0" layoutY="200.0" text="Country" />
+      <TextField layoutX="104.0" layoutY="54.0" />
+      <TextField layoutX="104.0" layoutY="90.0" />
+      <TextField layoutX="104.0" layoutY="124.0" />
+      <TextField layoutX="104.0" layoutY="162.0" />
+      <TextField layoutX="104.0" layoutY="195.0" />
+   </children>
+</AnchorPane>

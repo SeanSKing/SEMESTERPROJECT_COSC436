@@ -1,4 +1,4 @@
-/**
+ /**
  * Created by JamieReed207 on 4/13/17.
  */
 public class Invoker {
@@ -9,8 +9,9 @@ public class Invoker {
     }
 
 
-    public void invoke(Command command){
-        command.execute();
+    public Object invoke(Command command){
+         Object invokedObject = command.execute();
+         return invokedObject;
     }
 
     public void AddToCart(int i){
@@ -18,19 +19,27 @@ public class Invoker {
         invoke(add);
     }
 
-    public void GetAllStock(int i){
-        Command getStock = new CMDIterator(agg.getStockList(),i);
-        invoke(getStock);
+     public void AddToCart(Item item){
+         Command add = new CMDAddToCart(agg, item);
+         invoke(add);
+     }
+
+    public Object GetAllStock(int i){
+        Command getStock = new CMDIterator(agg,agg.getStockList(),i);
+        Object x = invoke(getStock);
+        return  x;
     }
 
-    public void GetAllCart(int i){
-        Command getCart = new CMDIterator(agg.getCartList(),i);
-        invoke(getCart);
+    public Object GetAllCart(int i){
+        Command getCart = new CMDIterator(agg,agg.getCartList(),i);
+        Object x = invoke(getCart);
+        return x;
     }
 
-    public void GetTagStock(String tag){
-        Command byTag = new CMDIterator(agg.getStockList(),tag);
-        invoke(byTag);
+    public Object GetTagStock(String tag){
+        Command byTag = new CMDIterator(agg,agg.getStockList(),tag);
+        Object i = invoke(byTag);
+        return i;
     }
 
 
@@ -46,9 +55,14 @@ public class Invoker {
 
     public void SetPreferences(String FirstName, String LastName,
                                String Address, String City, String State,
-                               String Country, boolean isPrime){
+                               String Country, boolean isPrime) {
         Command addPref = new CMDSetPreference(agg, FirstName, LastName, Address, City, State, Country, isPrime);
         invoke(addPref);
+    }
+
+    public void getPreferences(){
+        Command getPref = new CMDGetPreference(agg);
+        invoke(getPref);
     }
 
 

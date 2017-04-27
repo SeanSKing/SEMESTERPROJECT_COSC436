@@ -1,11 +1,15 @@
-import java.util.ArrayList;
+
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.List;
 
 /**
  * Created by JamieReed207 on 4/16/17.
  */
 public class CartList implements itemList{
-    private List<Item> CartList = new ArrayList<Item>();
+    private ObservableList<Item> CartList = FXCollections.observableArrayList();
     private static double total;
 
     public void addItem(Item item){
