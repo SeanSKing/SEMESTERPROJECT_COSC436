@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <ListView fx:id="Cartlist" layoutX="14.0" layoutY="53.0" prefHeight="200.0" prefWidth="121.0" />
+      <RadioButton layoutX="151.0" layoutY="87.0" mnemonicParsing="false" text="Next Day" />
+      <RadioButton layoutX="151.0" layoutY="135.0" mnemonicParsing="false" text="2-Day" />
+      <RadioButton layoutX="151.0" layoutY="182.0" mnemonicParsing="false" text="Ground" />
+      <Label layoutX="182.0" layoutY="105.0" text="Label" fx:id="nextDay"/>
+      <Label layoutX="182.0" layoutY="154.0" text="Label" fx:id="twoDay"/>
+      <Label layoutX="182.0" layoutY="200.0" text="Label" fx:id="ground"/>
+   </children>
+</AnchorPane>

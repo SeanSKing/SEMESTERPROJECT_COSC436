@@ -3,61 +3,28 @@
  */
 public class PreferenceUtil {
     private static PreferenceUtil ourInstance = new PreferenceUtil();
-    private String FirstName;
-    private String LastName;
-    private String Address;
-    private String City;
-    private String State;
-    private String Country;
-    private boolean isPrime;
+    private AbstractType user;
 
 
     public static PreferenceUtil getInstance() {
         return ourInstance;
     }
 
-    private PreferenceUtil() {
-    }
+   public void setUser(AbstractType newUser){
+       this.user = newUser;
+   }
 
-    public void setFirstName(String fName){
-        FirstName = fName;
-    }
+     public AbstractType getAccount(){
+         return user;
+     }
 
-    public String getFirstName(){
-        return FirstName;
-    }
+     public String getUser(){
+         return user.getName();
+     }
 
-    public void setLastName(String lName){
-        LastName = lName;
-    }
-
-    public String getLastName(){
-        return LastName;
-    }
-
-    public void setAddress(String address){
-        Address = address;
-    }
+     public Boolean getPrime(){
+         return user.isPrime();
+     }
 
 
-    public void setCity(String city){
-        City = city;
-    }
-
-
-    public void setState(String state){
-        State = state;
-    }
-
-    public void setCountry(String country){
-        Country = country;
-    }
-
-    public void setIsPrime(Boolean prime){
-        isPrime = prime;
-    }
-
-    public void getAccount(){
-        System.out.print( FirstName+" "+LastName+"\n"+Address+" \n"+City+", "+State+" "+Country);
-    }
 }

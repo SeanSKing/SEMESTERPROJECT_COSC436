@@ -4,8 +4,10 @@
 public class CMDGetPreference implements Command{
     private PreferenceUtil userPref;
 
-    public Object execute() { userPref.getAccount();
-    return null;}
+    public Object execute() {
+        Object prefObj = userPref.getAccount();
+        return prefObj;
+    }
 
     public CMDGetPreference(Aggregator agg){
         userPref = agg.getUserPref();

@@ -1,5 +1,3 @@
-
-
 /**
  * Created by JamieReed207 on 4/24/17.
  */
@@ -8,15 +6,7 @@ public class SystemInterface {
     public void setInvoker(Invoker invoker){
         invokes = invoker;
     }
-    public void SetPreferences(String FirstName, String LastName,
-                               String Address, String City, String State,
-                               String Country, boolean isPrime) {
-        invokes.SetPreferences(FirstName, LastName, Address, City, State, Country, isPrime);
-    }
 
-    public void AddToStock() {
-        invokes.AddToStock();
-    }
 
     public Object GetAllStock() {
         Object invokedObject = invokes.GetAllStock(0);
@@ -29,21 +19,31 @@ public class SystemInterface {
 
     public void AddToCart(Item item){invokes.AddToCart(item);}
 
-    public listIterator GetAllCart() {
+    public Object GetAllCart() {
         Object invokedObject = invokes.GetAllCart(0);
-        return (listIterator) invokedObject;
+        return  invokedObject;
     }
 
-    public listIterator GetTagStock(String s) {
+    public Object GetTagStock(String s) {
         Object invokedObject = invokes.GetTagStock(s);
-        return (listIterator) invokedObject;
+        return invokedObject;
+    }
+
+    public Object getShipping(){
+        Object invokedObject = invokes.getShipping();
+        return invokedObject;
+    }
+
+    public void signIn(String name){
+        invokes.SignIn(name);
     }
 
     public void RemoveFromCart(int i){
         invokes.RemoveFromCart(i);
     }
 
-    public void GetPreferences(){
-        invokes.getPreferences();
+    public Object GetPreferences(){
+        Object invokedObject = invokes.getPreferences();
+        return invokedObject;
     }
 }

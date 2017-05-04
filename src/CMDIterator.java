@@ -1,18 +1,13 @@
-
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 /**
- * Created by JamieReed207 on 4/23/17.
+ * Created by JamieReed207 on 5/1/17.
  */
 public class CMDIterator implements Command {
     private listIterator itr;
-    private ObservableList<Item> Observer = FXCollections.observableArrayList();
+    private itemList Observer;
 
-    public ObservableList<Item> execute() {
+    public itemList execute() {
         while(itr.hasNext()) {
-            Observer.add(itr.next());
+            Observer.addItem(itr.next());
         }
         return Observer;
     }

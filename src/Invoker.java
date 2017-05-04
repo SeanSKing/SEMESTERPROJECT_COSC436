@@ -25,45 +25,47 @@ public class Invoker {
      }
 
     public Object GetAllStock(int i){
-        Command getStock = new CMDIterator(agg,agg.getStockList(),i);
+        Command getStock = new CMDObservableIterator(agg,agg.getStockList(),i);
         Object x = invoke(getStock);
         return  x;
     }
 
     public Object GetAllCart(int i){
-        Command getCart = new CMDIterator(agg,agg.getCartList(),i);
+        Command getCart = new CMDObservableIterator(agg,  agg.getCartList(),i);
         Object x = invoke(getCart);
         return x;
     }
 
     public Object GetTagStock(String tag){
-        Command byTag = new CMDIterator(agg,agg.getStockList(),tag);
+        Command byTag = new CMDObservableIterator(agg, agg.getStockList(),tag);
         Object i = invoke(byTag);
         return i;
     }
 
+     public void SignIn(String name){
+         Command sign = new CMDSignIn(agg,name);
+         invoke(sign);
+     }
 
-    public void AddToStock(){
-        Command AddStock = new CMDAddToStock(agg);
-        invoke(AddStock);
-    }
+
 
     public void RemoveFromCart(int i){
         Command remove = new CMDRemoveFromCart(agg.getCartList(),i);
         invoke(remove);
     }
 
-    public void SetPreferences(String FirstName, String LastName,
-                               String Address, String City, String State,
-                               String Country, boolean isPrime) {
-        Command addPref = new CMDSetPreference(agg, FirstName, LastName, Address, City, State, Country, isPrime);
-        invoke(addPref);
+    public Object getPreferences(){
+        Command getPref = new CMDGetPreference(agg);
+        Object pref = invoke(getPref);
+        return pref;
     }
 
-    public void getPreferences(){
-        Command getPref = new CMDGetPreference(agg);
-        invoke(getPref);
-    }
+     public Object getShipping(){
+         PreferenceUtil prime = (PreferenceUtil) getPreferences();
+         Object shipping = new CMDgetShipping(agg,prime.getPrime());
+         return shipping;
+
+     }
 
 
 }

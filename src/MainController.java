@@ -3,6 +3,8 @@
 /**
  * Created by JamieReed207 on 4/26/17.
  */
+
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -10,7 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 
-public class Controller {
+public class MainController {
     @FXML
     private TableView<Item> itemTable;
     @FXML
@@ -27,14 +29,18 @@ public class Controller {
     private Label itemLabel;
     @FXML
     private Label priceLabel;
+    @FXML
+    private Label cartSize;
+    @FXML
+    private Label cartTotal;
+    @FXML
+    private TextField signInBar;
 
     private Item addItem;
 
-
-    // Reference to the main application.
     private Main main;
 
-    public Controller() {}
+    public MainController() {}
 
     @FXML
     private void initialize() {
@@ -56,7 +62,7 @@ public class Controller {
         if (item != null) {
             addItem = item;
             itemLabel.setText(item.getName());
-            priceLabel.setText(Float.toString(item.getPrice()));
+            priceLabel.setText("$"+Float.toString(item.getPrice()));
         } else {
             itemLabel.setText("");
             priceLabel.setText("");
@@ -67,20 +73,41 @@ public class Controller {
     @FXML
     private void addToCartButton(){
         if(addItem != null){
-            System.out.print("added");
             main.addToCart(addItem);
+            ObservableList<Item> cart = (ObservableList<Item>) main.getCartData();
+            cartSize.setText(String.valueOf(cart.size()));
+            Float total = Float.valueOf(0);
+            for( Item item : cart){
+                total = total + item.getPrice();
+            }
+            cartTotal.setText(String.valueOf(total));
         } else{
-            System.out.print("no item");
+            System.out.print("something went wrong");
         }
     }
 
+    @FXML
+    private void checkOutButton() throws Exception {
+        main.checkoutPath();
+    }
+    @FXML
+    private void signIn(){
+        main.signIn(signInBar.getText());
+    }
+
+    @FXML
+    private void searchButton(){
+        itemTable.setItems((ObservableList<Item>) main.getSearch(SearchBar.getText()));
+    }
+
+
     public void setMainApp(Main mainApp) {
         this.main = mainApp;
+        itemTable.setItems((ObservableList<Item>) main.getItemData());
 
-        // Add observable list data to the table
-        itemTable.setItems(mainApp.getItemData());
 
     }
+
 }
 
 

@@ -60,7 +60,7 @@ public class Main extends Application {
             rootLayout.setCenter(ItemOverview);
 
             // Give the controller access to the main app.
-            Controller controller = loader.getController();
+            MainController controller = loader.getController();
             controller.setMainApp(this);
 
         } catch (IOException e) {
@@ -72,23 +72,40 @@ public class Main extends Application {
         return primaryStage;
     }
 
-
-    public ObservableList<Item> getItemData() {
-        return (ObservableList<Item>) SI.GetAllStock();
+    public Object getItemData() {
+        return  SI.GetAllStock();
     }
 
     public void addToCart(Item item){
         SI.AddToCart(item);
     }
 
-    public ObservableList<Item> getCartData(){ return (ObservableList<Item>) SI.GetAllCart();}
+    public Object getCartData(){ return SI.GetAllCart();}
+
+    public Object getSearch(String s){
+        return SI.GetTagStock(s);
+    }
+
+    public void signIn(String name){
+        SI.signIn(name);
+    }
+
+    public void checkoutPath(){
+        ObservableList cart = (ObservableList<Item>) SI.GetAllCart();
+        Receipt starter = new ReceiptItems(cart);
+        Receipt greeting = new ReceiptGreetings(starter);
+        Receipt farewell = new ReceiptFarewell(greeting);
+
+        farewell.Printer();
+
+    }
+
 
    public Main(){
        Invoker invokes = new Invoker(new Aggregator());
        SI = new SystemInterface();
        SI.setInvoker(invokes);
    }
-
 
     public static void main(String[] args) {launch(args);}
 }

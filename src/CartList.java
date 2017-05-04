@@ -11,6 +11,7 @@ import java.util.List;
 public class CartList implements itemList{
     private ObservableList<Item> CartList = FXCollections.observableArrayList();
     private static double total;
+    private static double shipping;
 
     public void addItem(Item item){
         CartList.add(item);
@@ -30,5 +31,23 @@ public class CartList implements itemList{
 
     public int getSize() {return CartList.size();}
 
+    public double getTotal(){
+        total = 0;
+        for( Item item : CartList){
+            total = total + item.getPrice();
+        }
+        return total;
+    }
+
+    public void setShipping(double x){
+        shipping = x;
+    }
+
+    public double getShipping(){
+        return shipping;
+    }
 
 }
+
+
+
