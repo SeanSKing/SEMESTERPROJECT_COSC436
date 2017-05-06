@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by JamieReed207 on 4/16/17.
  */
-public class StockList implements itemList{
+public class StockList implements ItemList {
     private ObservableList<Item> StockList = FXCollections.observableArrayList();
 
     public void addItem(Item item){

@@ -7,8 +7,10 @@ import java.text.DecimalFormat;
  */
 public class ReceiptItems implements Receipt {
     private ObservableList<Item> c;
-    public ReceiptItems(ObservableList cart){
+    private double shippingCost;
+    public ReceiptItems(ObservableList cart, Double shipping){
         c=cart;
+        shippingCost = shipping;
     }
     public void Printer() {
         double total = 0;
@@ -18,10 +20,11 @@ public class ReceiptItems implements Receipt {
         }
         System.out.println("____________________________________________________   ");
         System.out.println("Item Cost.......................................$"+total);
+        System.out.println("Shipping........................................$"+shippingCost);
         double tax = total * 0.07;
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println(String.format("tax.............................................$" + df.format(tax)));
-        double cost = tax + total;
+        double cost = tax + total + shippingCost;
         System.out.println("Total..........................................$"+cost);
 
     }

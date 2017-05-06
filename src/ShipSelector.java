@@ -13,12 +13,6 @@ public class ShipSelector {
 
 
     public void getOptions() {
-        System.out.println("Next Day");
-        System.out.print(new ShipGround(cartList,prime).calculate());
-
-        System.out.println("2 Day");
-
-        System.out.println("Ground");
 
     }
 

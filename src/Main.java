@@ -3,7 +3,6 @@
  */
 
 import javafx.application.Application;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -89,15 +88,16 @@ public class Main extends Application {
     public void signIn(String name){
         SI.signIn(name);
     }
+    public Object getPreferences() {
+        return SI.GetPreferences();
+    }
 
     public void checkoutPath(){
-        ObservableList cart = (ObservableList<Item>) SI.GetAllCart();
-        Receipt starter = new ReceiptItems(cart);
-        Receipt greeting = new ReceiptGreetings(starter);
-        Receipt farewell = new ReceiptFarewell(greeting);
+            SI.checkOut();
+    }
 
-        farewell.Printer();
-
+    public void setShipping(String shipping){
+        SI.setShipping(shipping);
     }
 
 

@@ -3,8 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import com.sun.javafx.webkit.theme.RenderThemeImpl.FormRadioButton?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <VBox layoutY="29.0" prefHeight="336.0" prefWidth="500.0">
          <children>
@@ -39,7 +40,18 @@
          </children></VBox>
       <TextField fx:id="SearchBar" layoutX="11.0" layoutY="1.0" prefHeight="27.0" prefWidth="247.0" />
       <Button layoutX="270.0" layoutY="1.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
-      <TextField layoutX="14.0" layoutY="365.0" fx:id="signInBar"/>
-      <Button layoutX="191.0" layoutY="365.0" mnemonicParsing="false" text="Sign In" onAction="#signIn"/>
+      <TextField fx:id="signInBar" layoutX="14.0" layoutY="379.0" />
+      <Button layoutX="190.0" layoutY="379.0" mnemonicParsing="false" onAction="#signIn" text="Sign In" />
+      <Label fx:id="UserLabel" layoutX="289.0" layoutY="384.0" />
+      <Pane layoutX="500.0" layoutY="94.0" prefHeight="243.0" prefWidth="200.0">
+         <children>
+             <RadioButton fx:id="nextDayRadio" layoutX="56.0" layoutY="28.0" mnemonicParsing="false" text="Next Day" />
+             <RadioButton fx:id="twoDayRadio" layoutX="56.0" layoutY="81.0" mnemonicParsing="false" text="2-Day" />
+             <RadioButton fx:id="groundRadio" layoutX="56.0" layoutY="128.0" mnemonicParsing="false" text="Ground" />
+             <Label fx:id="nextDay" layoutX="106.0" layoutY="53.0" />
+             <Label fx:id="twoDay" layoutX="105.0" layoutY="105.0" />
+             <Label fx:id="ground" layoutX="106.0" layoutY="145.0" />
+         </children>
+       </Pane>
    </children>
 </AnchorPane>

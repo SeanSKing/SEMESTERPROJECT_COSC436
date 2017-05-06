@@ -5,7 +5,8 @@ public class Aggregator {
     private PreferenceUtil UserPref = PreferenceUtil.getInstance();
     private StockList stockList = new StockList();
     private CartList cartList = new CartList();
-    private listIterator ProductList;
+    private IteratorInterface ProductList;
+    private ShipOptions shipMethod;
 
     public Aggregator() {
         String [] newTag = { "camera", "electronics" ,"all"};
@@ -17,13 +18,13 @@ public class Aggregator {
         newTag = new String[]{"electronics","all"};
         stockList.addItem(new Item("Garmin", 3, "never get lost again", 80,newTag));
         newTag = new String[]{"food","fitness","health","all"};
-        stockList.addItem(new Item("Protein", 6, "cool camera", 20,newTag));
+        stockList.addItem(new Item("Protein", 6, "cool protein", 20,newTag));
         newTag = new String[]{"health","all"};
         stockList.addItem(new Item("toothbrush", 1, "brush your teeth kids", 20,newTag));
         newTag = new String[]{"sports","all"};
         stockList.addItem(new Item("Football", 1, "Go long", 13,newTag));
         newTag = new String[]{"pets","all","food"};
-        stockList.addItem(new Item("Dog Fodd", 12, "Dogs need to eat too", 7,newTag));
+        stockList.addItem(new Item("Dog Food", 12, "Dogs need to eat too", 7,newTag));
         newTag = new String[]{"clothing","sports","all"};
         stockList.addItem(new Item("Orioles Hat", 2, "Let's Go O's", 15,newTag));
         newTag = new String[]{"cooking","all"};
@@ -42,13 +43,21 @@ public class Aggregator {
         return cartList;
     }
 
-    public void setIteratorLsit(listIterator list){
+    public void setIteratorLsit(IteratorInterface list){
         ProductList = list;
     }
 
-    public listIterator getIteratorList(){
+    public IteratorInterface getIteratorList(){
         return ProductList;
     }
+
+     public void setShipMethod(ShipOptions ship){
+         this.shipMethod = ship;
+     }
+
+     public ShipOptions getShipMethod(){
+             return this.shipMethod;
+     }
 
 
 }

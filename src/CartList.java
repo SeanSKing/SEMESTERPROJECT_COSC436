@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by JamieReed207 on 4/16/17.
  */
-public class CartList implements itemList{
+public class CartList implements ItemList {
     private ObservableList<Item> CartList = FXCollections.observableArrayList();
     private static double total;
     private static double shipping;

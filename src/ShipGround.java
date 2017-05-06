@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 /**
  * Created by JamieReed207 on 5/2/17.
@@ -6,11 +6,12 @@ import java.util.ArrayList;
 public class ShipGround implements ShipOptions {
     private double StarterRate = 3;
     private double weightRate = 2;
-    private ArrayList<Item> cartlist;
+    private ObservableList<Item> cartlist;
     private Boolean Prime;
 
-    public ShipGround(CartList cartList, Boolean p ){
-        ArrayList<Item> cartlist = (ArrayList<Item>) cartList.getList();
+
+    public void set(CartList cart, Boolean p){
+        cartlist = (ObservableList<Item>) cart.getList();
         Prime = p;
     }
 

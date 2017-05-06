@@ -46,4 +46,12 @@ public class SystemInterface {
         Object invokedObject = invokes.getPreferences();
         return invokedObject;
     }
+
+    public void setShipping(String shipping){
+        invokes.setShipping(shipping);
+    }
+
+    public void checkOut(){
+        invokes.checkOut();
+    }
 }

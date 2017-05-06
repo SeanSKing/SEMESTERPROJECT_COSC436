@@ -3,18 +3,18 @@
  */
 public class PreferenceUtil {
     private static PreferenceUtil ourInstance = new PreferenceUtil();
-    private AbstractType user;
+    private TypeAbstract user;
 
 
     public static PreferenceUtil getInstance() {
         return ourInstance;
     }
 
-   public void setUser(AbstractType newUser){
+   public void setUser(TypeAbstract newUser){
        this.user = newUser;
    }
 
-     public AbstractType getAccount(){
+     public TypeAbstract getAccount(){
          return user;
      }
 
