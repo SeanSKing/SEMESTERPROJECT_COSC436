@@ -1,2 +1,2 @@
 # SEMESTERPROJECT_COSC436
-<img src="./classDiagram1.jpg"/>
+<img src="./uml2.jpg"/>
